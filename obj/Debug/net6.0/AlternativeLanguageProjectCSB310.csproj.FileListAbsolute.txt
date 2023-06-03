@@ -1,0 +1,15 @@
+/home/runner/AlternativeLanguageProjectCSB310/obj/Debug/net6.0/AlternativeLanguageProjectCSB310.csproj.AssemblyReference.cache
+/home/runner/AlternativeLanguageProjectCSB310/obj/Debug/net6.0/AlternativeLanguageProjectCSB310.GeneratedMSBuildEditorConfig.editorconfig
+/home/runner/AlternativeLanguageProjectCSB310/obj/Debug/net6.0/AlternativeLanguageProjectCSB310.AssemblyInfoInputs.cache
+/home/runner/AlternativeLanguageProjectCSB310/obj/Debug/net6.0/AlternativeLanguageProjectCSB310.AssemblyInfo.cs
+/home/runner/AlternativeLanguageProjectCSB310/obj/Debug/net6.0/AlternativeLanguageProjectCSB310.csproj.CoreCompileInputs.cache
+/home/runner/AlternativeLanguageProjectCSB310/bin/Debug/net6.0/AlternativeLanguageProjectCSB310
+/home/runner/AlternativeLanguageProjectCSB310/bin/Debug/net6.0/AlternativeLanguageProjectCSB310.deps.json
+/home/runner/AlternativeLanguageProjectCSB310/bin/Debug/net6.0/AlternativeLanguageProjectCSB310.runtimeconfig.json
+/home/runner/AlternativeLanguageProjectCSB310/bin/Debug/net6.0/AlternativeLanguageProjectCSB310.dll
+/home/runner/AlternativeLanguageProjectCSB310/bin/Debug/net6.0/AlternativeLanguageProjectCSB310.pdb
+/home/runner/AlternativeLanguageProjectCSB310/obj/Debug/net6.0/AlternativeLanguageProjectCSB310.dll
+/home/runner/AlternativeLanguageProjectCSB310/obj/Debug/net6.0/refint/AlternativeLanguageProjectCSB310.dll
+/home/runner/AlternativeLanguageProjectCSB310/obj/Debug/net6.0/AlternativeLanguageProjectCSB310.pdb
+/home/runner/AlternativeLanguageProjectCSB310/obj/Debug/net6.0/AlternativeLanguageProjectCSB310.genruntimeconfig.cache
+/home/runner/AlternativeLanguageProjectCSB310/obj/Debug/net6.0/ref/AlternativeLanguageProjectCSB310.dll
