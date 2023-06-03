@@ -167,3 +167,5 @@ OEM: Haier, Model: Z8000
 How many phones have only one feature sensor? 847
 
 What year had the most phones launched in the 2000s? 2003
+
+![Screen Shot 2023-06-02 at 9](Screen%20Shot%202023-06-02%20at%209.03.04%20PM.png)
