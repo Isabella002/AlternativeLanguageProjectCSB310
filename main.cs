@@ -1,29 +1,32 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 
 class main {
-    static void Main(string[] args) {
+    static void Main(string[] args)
+    {
         List<Cell> cells = new List<Cell>();
         string filePath = "cells.csv";
 
         // Read the file and populate the list of cells
         ReadFile(cells, filePath);
 
-        // Create PhoneAnalyzer instance and analyze the phones
-        PhoneAnalyzer analyzer = new PhoneAnalyzer(cells);
-        analyzer.AnalyzePhones();
+        // Run unit tests
+        RunUnitTests(cells);
     }
 
-    static void ReadFile(List<Cell> cells, string filePath) {
-        try {
+    static void ReadFile(List<Cell> cells, string filePath)
+    {
+        try
+        {
             string[] lines = File.ReadAllLines(filePath);
 
-            foreach (string line in lines) {
+            foreach (string line in lines)
+            {
                 string[] values = line.Split(',');
 
-                Cell cell = new Cell {
+                Cell cell = new Cell
+                {
                     Manufacturer = values[0],
                     Model = values[1],
                     LaunchAnnounced = ConvertToInt(values[2]),
@@ -40,12 +43,15 @@ class main {
 
                 cells.Add(cell);
             }
-        } catch (FileNotFoundException) {
+        }
+        catch (FileNotFoundException)
+        {
             Console.WriteLine("File not found.");
         }
     }
 
-    static int? ConvertToInt(string value) {
+    static int? ConvertToInt(string value)
+    {
         if (string.IsNullOrEmpty(value) || value == "-")
             return null;
 
@@ -56,7 +62,8 @@ class main {
             return null;
     }
 
-    static float? ConvertToFloat(string value) {
+    static float? ConvertToFloat(string value)
+    {
         if (string.IsNullOrEmpty(value) || value == "-")
             return null;
 
@@ -67,20 +74,23 @@ class main {
             return null;
     }
 
-    static void RunUnitTests(List<Cell> cells) {
+    static void RunUnitTests(List<Cell> cells)
+    {
         // Ensure the file being read is not empty
-        if (cells.Count == 0) {
+        if (cells.Count == 0)
+        {
             Console.WriteLine("File is empty.");
             return;
         }
-      
+
         // Ensure each column's final transformation matches the expected form
         // Display Size should be a float
         double? displaySizeMean = Cell.CalculateMean(cells, c => c.DisplaySize);
         Console.WriteLine("Display Size Mean: " + displaySizeMean);
 
         // Ensure all missing or "-" data is replaced with a null value
-        foreach (Cell cell in cells) {
+        foreach (Cell cell in cells)
+        {
             Console.WriteLine(cell.ToString());
         }
 

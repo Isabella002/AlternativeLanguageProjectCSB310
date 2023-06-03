@@ -20,6 +20,9 @@ System.Collections.Generic: Includes a generic collection of classes (List<T>) &
 System: This is the "core" library in C# that provides fundamental types & functionalities. It is used for general purposes, including exception handling (System.Exception) & basic data types (System.Int32, System.Single, etc.).
 I chose to include these libraries in the project because they are part of the standard ".NET Framework" & possess the necessary functionality to handle file operations, collections, & other standard programming tasks. There are a lot of other libraries C# supports that have different reasons for usage. 
 
+
+To answer the following questions, I had made a PhoneAnalyzer class that answers the questions but it is commented out to run the primary program. 
+
 What company (oem) has the highest average weight of the phone body? 
 Motorola
 

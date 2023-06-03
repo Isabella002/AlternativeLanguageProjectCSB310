@@ -2,8 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-public class Cell
-{
+class Cell {
     public string? Manufacturer { get; set; }
     public string? Model { get; set; }
     public int? LaunchAnnounced { get; set; }
@@ -17,8 +16,7 @@ public class Cell
     public string? FeaturesSensors { get; set; }
     public string? PlatformOs { get; set; }
 
-    public override string ToString()
-    {
+    public override string ToString() {
         return $"Manufacturer: {Manufacturer}\n" +
                $"Model: {Model}\n" +
                $"Launch Announced: {LaunchAnnounced}\n" +
@@ -33,23 +31,7 @@ public class Cell
                $"Platform OS: {PlatformOs}\n";
     }
 
-    public bool IsAnnouncedInDifferentYear()
-    {
-        return LaunchAnnounced != null && LaunchStatus != null && LaunchAnnounced != Convert.ToInt32(LaunchStatus);
-    }
-
-    public bool HasOneFeatureSensor()
-    {
-        if (FeaturesSensors != null)
-        {
-            List<string> sensors = FeaturesSensors.Split(',').ToList();
-            return sensors.Count == 1;
-        }
-        return false;
-    }
-
-    public static double? CalculateMean(List<Cell> cells, Func<Cell, double?> selector)
-    {
+    public static double? CalculateMean(List<Cell> cells, Func<Cell, double?> selector) {
         List<double?> values = cells.Select(selector).ToList();
         if (values.All(x => x != null))
             return values.Average();
@@ -57,52 +39,41 @@ public class Cell
             return null;
     }
 
-    public static double? CalculateMedian(List<Cell> cells, Func<Cell, double?> selector)
-    {
+    public static double? CalculateMedian(List<Cell> cells, Func<Cell, double?> selector) {
         List<double?> values = cells.Select(selector).ToList();
-        if (values.All(x => x != null))
-        {
+        if (values.All(x => x != null)) {
             values.Sort();
             int count = values.Count;
             if (count % 2 == 0)
                 return (values[count / 2 - 1] + values[count / 2]) / 2;
             else
                 return values[count / 2];
-        }
-        else
-        {
+        } else {
             return null;
         }
     }
 
-    public static double? CalculateStandardDeviation(List<Cell> cells, Func<Cell, double?> selector)
-    {
+    public static double? CalculateStandardDeviation(List<Cell> cells, Func<Cell, double?> selector) {
         List<double?> values = cells.Select(selector).ToList();
-        if (values.All(x => x != null))
-        {
+        if (values.All(x => x != null)) {
             double mean = values.Average() ?? 0;
             double sumOfSquares = values.Sum(x => Math.Pow((x ?? 0) - mean, 2));
             double variance = sumOfSquares / values.Count;
             return Math.Sqrt(variance);
-        }
-        else
-        {
+        } else {
             return null;
         }
     }
 
-    public static List<string> GetUniqueValues(List<Cell> cells, Func<Cell, string> selector)
-    {
+    public static List<string> GetUniqueValues(List<Cell> cells, Func<Cell, string> selector) {
         return cells.Select(selector).Distinct().ToList();
     }
 
-    public static void AddCell(List<Cell> cells, Cell cell)
-    {
+    public static void AddCell(List<Cell> cells, Cell cell) {
         cells.Add(cell);
     }
 
-    public static void DeleteCell(List<Cell> cells, Cell cell)
-    {
+    public static void DeleteCell(List<Cell> cells, Cell cell) {
         cells.Remove(cell);
     }
 }
